@@ -6,7 +6,6 @@ const Homepage = () => {
   return (
     <div>
       <h1>Home page</h1>
-      <Link to="/details"> go to details page</Link>
     </div>
   );
 };

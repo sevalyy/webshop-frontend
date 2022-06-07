@@ -5,8 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 const Shop = () => {
   return (
     <div>
-      <h1>Home page</h1>
-      <Link to="/">Home</Link>
+      <h1>Shop page</h1>
     </div>
   );
 };
