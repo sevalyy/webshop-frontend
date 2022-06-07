@@ -1,0 +1,26 @@
+.navbar-container {
+  /* full width */
+  width: 100%;
+  /* Fixed height */
+  height: 60px;
+  background-color: #8568ff;
+  /* flex box */
+  display: flex;
+  align-items: center;
+}
+
+.green-box {
+  background-color: greenyellow;
+  margin-left: auto;
+  margin-right: auto;
+  /* min-height: 30px; */
+  min-width: 20vw;
+  max-width: 60vw;
+  flex-grow: 1;
+}
+
+.red-box {
+  background-color: red;
+  min-height: 30px;
+  min-width: 10vw;
+}
