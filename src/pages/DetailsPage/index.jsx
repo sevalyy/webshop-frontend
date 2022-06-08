@@ -85,7 +85,7 @@ const DetailsPage = () => {
           <button>
             <FaHeart /> Favorite
           </button>
-          <p>Category: {product.categoryId}</p>
+          <p>Category: {product.category.title}</p>
           <p>
             {" "}
             Share <FaFacebook /> <FaInstagram /> <FaTwitter />{" "}
