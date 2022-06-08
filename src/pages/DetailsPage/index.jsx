@@ -7,6 +7,7 @@ const DetailsPage = () => {
   return (
     <div>
       <h1>Details Page</h1>
+      <h2>more details</h2>
     </div>
   );
 };
