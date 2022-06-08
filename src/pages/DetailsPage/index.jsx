@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Banner from "../../components/Banner";
+import Tabs from "../../components/Tabs";
 import {
   FaFacebook,
   FaInstagram,
@@ -18,7 +19,6 @@ const DetailsPage = () => {
 
   useEffect(() => {
     async function getDetails() {
-      // const productId = params.id;
       try {
         const response = await axios.get(
           `http://localhost:4000/products/${params.id}`
@@ -86,11 +86,7 @@ const DetailsPage = () => {
           </p>
         </div>
       </div>
-      <div className="description">
-        <h3>Description</h3>
-        <h3>Additional info</h3>
-        <h3>Reviews</h3>
-      </div>
+      <Tabs product={product} />
     </div>
   );
 };
