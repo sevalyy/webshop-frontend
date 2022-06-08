@@ -6,6 +6,7 @@ const Shop = () => {
   return (
     <div>
       <h1>Shop page</h1>
+      <p>My new page shop</p>
     </div>
   );
 };
