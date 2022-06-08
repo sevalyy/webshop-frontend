@@ -2,6 +2,7 @@ import "./style.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Banner from "../../components/Banner";
 import {
   FaFacebook,
   FaInstagram,
@@ -36,14 +37,7 @@ const DetailsPage = () => {
 
   return (
     <div className="container">
-      <div className="banner">
-        <div className="bannerText">
-          Product for every need, at the distance of a click
-        </div>
-        <div>
-          <img src="" alt=""></img>
-        </div>
-      </div>
+      <Banner />
       <div className="details">
         <div>
           <img className="bigImg" src={product.mainImage} alt={product.title} />
