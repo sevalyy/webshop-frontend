@@ -1,0 +1,68 @@
+.container {
+  background-color: aliceblue;
+}
+
+.banner {
+  width: 100%;
+  background-color: #8568ff;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  position: relative;
+  color: aliceblue;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.bannerText {
+  position: absolute;
+  text-align: center;
+}
+.details {
+  height: 600px;
+  width: 100%;
+}
+.description {
+  background-color: rgba(168, 166, 166, 0.89);
+  height: 300px;
+  width: 100%;
+}
+.bigImg {
+  width: 150px;
+  height: 180px;
+}
+
+.rate {
+  float: left;
+  height: 36px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 20px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}

@@ -1,9 +1,9 @@
-import './App.css';
-import NavBar from './components/NavBar';
-import DetailsPage from './pages/DetailsPage';
-import Homepage from './pages/Homepage';
-import Shop from './pages/Shop';
-import { Route, Routes } from 'react-router-dom';
+import "./App.css";
+import NavBar from "./components/NavBar";
+import DetailsPage from "./pages/DetailsPage";
+import Homepage from "./pages/Homepage";
+import Shop from "./pages/Shop";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/details" element={<DetailsPage />} />
+        <Route path="/details/:id" element={<DetailsPage />} />
         {/* don't forget to add :id */}
         <Route path="/shop" element={<Shop />} />
       </Routes>
