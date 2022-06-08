@@ -1,0 +1,10 @@
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 15px;
+}
+
+.shop-filter-container {
+  /* padding-top: 15px; */
+}

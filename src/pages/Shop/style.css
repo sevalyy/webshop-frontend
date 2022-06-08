@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.shop-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.filter-container {
+  width: 15vw;
+}
+
+.product-container {
+  width: 60vw;
+}
