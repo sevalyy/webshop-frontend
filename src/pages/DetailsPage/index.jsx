@@ -31,18 +31,17 @@ const DetailsPage = () => {
     getDetails();
   }, []);
 
-  console.log("What is params", params);
-
   if (!product) return <div>Loading...</div>;
 
   return (
     <div className="container">
       <Banner />
-      <div className="details">
-        <div>
+      <div className="detailsPage">
+        <div className="detailsImage">
           <img className="bigImg" src={product.mainImage} alt={product.title} />
         </div>
-        <div>
+        <div className="productInfo">
+          <h3>{product.title}</h3>
           <p className="rate">
             <input type="radio" id="star5" name="rate" value="5" />
             <label for="star5" title="text">
@@ -64,19 +63,20 @@ const DetailsPage = () => {
             <label for="star1" title="text">
               1
             </label>
-            <button>Add Review</button>
           </p>
-          <h3>{product.title}</h3>
-          <p>
-            <FaEuroSign />
-            {product.price}
-          </p>
+          <button onClick={() => console.log("Add Review clicked!")}>
+            Add Review
+          </button>
+          <br />
+          <p className="price">Price: €{product.price}</p>
           <p>{product.description}</p>
-          <button>
+          <button onClick={() => console.log("Item on your basket")}>
             <FaShoppingBag />
             Add To Cart
           </button>{" "}
-          <button>
+          <button
+            onClick={() => console.log("Item is added to your favorite.")}
+          >
             <FaHeart /> Favorite
           </button>
           <p>Category: {product.category.title}</p>

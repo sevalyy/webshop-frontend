@@ -1,10 +1,27 @@
+* {
+  box-sizing: border-box;
+}
 .container {
-  background-color: aliceblue;
+  background-color: #e5e5e5;
 }
 
-.details {
-  height: 600px;
+.detailsPage {
+  height: 450px;
   width: 100%;
+}
+.detailsImage {
+  float: left;
+  width: 40%;
+  padding: 5px;
+  padding-top: 65px;
+}
+.productInfo {
+  float: left;
+  text-align: left;
+  width: 60%;
+  padding-left: 30px;
+  padding-right: 70px;
+  padding-top: 65px;
 }
 .description {
   background-color: rgba(168, 166, 166, 0.89);
@@ -12,13 +29,16 @@
   width: 100%;
 }
 .bigImg {
-  width: 150px;
-  height: 180px;
+  width: 200px;
+  height: 300px;
+  float: right;
 }
-
+.price {
+  font-size: larger;
+}
 .rate {
   float: left;
-  height: 36px;
+  height: 26px;
   padding: 0 10px;
 }
 .rate:not(:checked) > input {
@@ -31,7 +51,7 @@
   overflow: hidden;
   white-space: nowrap;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 16px;
   color: #ccc;
 }
 .rate:not(:checked) > label:before {

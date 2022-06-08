@@ -2,24 +2,24 @@
   display: flex;
 }
 .tab {
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background: lightsteelblue;
-  padding: 2em 0;
+  justify-content: left;
+  align-items: left;
+  width: 20%;
+  background: e5e5e5;
+  padding: 1em 0;
   border: none;
 }
-.tab:not(:last-child) {
-  border-right: 1px solid steelblue;
-}
+
 .tab.active {
-  background: steelblue;
+  background-color: #8568ff;
   font-weight: bold;
 }
 .panel {
   display: none;
-  background-color: #eaeaea;
-  padding: 10px;
+  background-color: #8568ff;
+  padding: 0 0 0 30px;
+  height: 250px;
+  text-align: left;
 }
 .panel.active {
   display: block;

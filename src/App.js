@@ -4,6 +4,7 @@ import DetailsPage from "./pages/DetailsPage";
 import Homepage from "./pages/Homepage";
 import Shop from "./pages/Shop";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         {/* don't forget to add :id */}
         <Route path="/shop" element={<Shop />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

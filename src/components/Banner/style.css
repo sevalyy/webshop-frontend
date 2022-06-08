@@ -43,7 +43,7 @@
 }
 
 .two-thirds {
-  padding: 150px;
+  padding: 100px;
   width: calc(100% * 2 / 3);
   flex: none;
 }
