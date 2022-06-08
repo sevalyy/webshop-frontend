@@ -1,7 +1,8 @@
 import './style.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, NavLink } from 'react-router-dom';
+import { FaBeer, FaHeart, FaShoppingBag, FaUser } from 'react-icons/fa';
 
 const NavBar = () => {
   return (
@@ -11,25 +12,49 @@ const NavBar = () => {
           <h1 className="logo">
             The<span>Shop</span>
           </h1>
-          <ul className="nav-links">
+          <ul className="nav-list">
             <li>
-              <Link to="/" className="links">
+              <NavLink
+                to="/"
+                className="links"
+                style={({ isActive }) =>
+                  isActive ? { color: 'white' } : undefined
+                }
+              >
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>Products</li>
             <li>Blog</li>
             <li>
-              <Link to="/shop" className="links">
+              <NavLink
+                to="/shop"
+                className="links"
+                style={({ isActive }) =>
+                  isActive ? { color: 'white' } : undefined
+                }
+              >
                 Shop
-              </Link>
+              </NavLink>
             </li>
             <li>Contact</li>
           </ul>
         </div>
         <input placeholder="Search..."></input>
       </div>
-      <div className="red-box">Icons</div>
+      <div className="red-box">
+        <ul className="nav-list">
+          <li>
+            <FaUser />
+          </li>
+          <li>
+            <FaShoppingBag />
+          </li>
+          <li>
+            <FaHeart />
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

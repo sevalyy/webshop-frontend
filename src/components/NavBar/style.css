@@ -23,7 +23,8 @@
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  align-items: center;
+  /* padding: 15px; */
 }
 
 .links-logo {
@@ -41,22 +42,25 @@
   color: white;
 }
 
-.nav-links {
+.nav-list {
   list-style-type: none;
   display: flex;
   font-size: 14px;
 }
 
-.nav-links li {
-  padding: 0 1vw;
+.nav-list li {
+  padding: 10px;
 }
 
 .links {
   text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.links:active {
-  /* color: white; */
+.links:hover {
+  text-decoration: underline;
+  background-color: #7656f6;
 }
 
 input {
@@ -66,7 +70,6 @@ input {
 }
 
 .red-box {
-  background-color: red;
-  min-height: 30px;
+  /* background-color: red; */
   min-width: 10vw;
 }
