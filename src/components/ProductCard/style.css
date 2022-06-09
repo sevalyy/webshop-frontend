@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  height: 230px;
+  border-radius: 8px;
+  margin: 15px;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 5px rgba(231, 230, 239, 0.4);
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px 20px 20px 20px;
+  width: 150px;
+  height: 100px;
+}
+
+.image-product {
+  width: auto;
+  max-width: 100%;
+  /* border-radius: 8px; */
+}
+
+.product-card {
+  text-align: left;
+  margin: 20px;
+  max-width: 600px;
+}
+
+.price-container {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.icons-container ul {
+  display: flex;
+}
+
+.icons-container li {
+  list-style-type: none;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  box-shadow: 0 0 2px 2px rgba(231, 230, 239, 0.3);
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* how to centralize the icons inside the card */
+.icons-container span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.details-link {
+  text-decoration: none;
+}
+
+/* How to improve this overflow */
+.description {
+  white-space: normal;
+  /* white-space: nowrap; */
+  height: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blue-color {
+  color: #111c85;
+  /* line-height: 20px; */
+}
+
+.gray-color {
+  color: #9295aa;
+  line-height: 24px;
+}

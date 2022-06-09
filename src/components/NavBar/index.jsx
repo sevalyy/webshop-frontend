@@ -2,7 +2,7 @@ import './style.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
-import { FaBeer, FaHeart, FaShoppingBag, FaUser } from 'react-icons/fa';
+import { FaHeart, FaShoppingBag, FaUser } from 'react-icons/fa';
 
 const NavBar = () => {
   return (
