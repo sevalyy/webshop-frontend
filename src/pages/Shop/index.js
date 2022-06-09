@@ -54,6 +54,7 @@ const Shop = () => {
             return (
               <ProductCard
                 key={id}
+                id={id}
                 image={mainImage}
                 productName={title}
                 price={price}
