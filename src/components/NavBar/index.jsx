@@ -1,8 +1,8 @@
-import './style.css';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useParams, NavLink } from 'react-router-dom';
-import { FaHeart, FaShoppingBag, FaUser } from 'react-icons/fa';
+import "./style.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams, NavLink } from "react-router-dom";
+import { FaHeart, FaShoppingBag, FaUser } from "react-icons/fa";
 
 const NavBar = () => {
   return (
@@ -10,7 +10,7 @@ const NavBar = () => {
       <div className="green-box">
         <div className="links-logo">
           <h1 className="logo">
-            The<span>Shop</span>
+            The<span className="span">Shop</span>
           </h1>
           <ul className="nav-list">
             <li>
@@ -18,7 +18,7 @@ const NavBar = () => {
                 to="/"
                 className="links"
                 style={({ isActive }) =>
-                  isActive ? { color: 'white' } : undefined
+                  isActive ? { color: "white" } : undefined
                 }
               >
                 Home
@@ -31,7 +31,7 @@ const NavBar = () => {
                 to="/shop"
                 className="links"
                 style={({ isActive }) =>
-                  isActive ? { color: 'white' } : undefined
+                  isActive ? { color: "white" } : undefined
                 }
               >
                 Shop

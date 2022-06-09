@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Playfair+Display&family=Square+Peg&display=swap");
+
+.banner {
+  width: 100%;
+  background-color: #8568ff;
+  height: 300px;
+  color: aliceblue;
+  font-family: "Beau Rivage", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  font-size: 40px;
+}
+
+.bannerText {
+  font-size: x-large;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+.bannerImage > img {
+  width: 240px;
+  height: 180px;
+}
+
+.bannerImage {
+  padding: 75px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.row .row {
+  margin: 0;
+}
+
+.row > * {
+  flex: 1;
+}
+
+.two-thirds {
+  padding: 100px;
+  width: calc(100% * 3 / 5);
+  flex: none;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+  .bannerImage {
+    padding: 0px;
+  }
+  .two-thirds {
+    padding: 0 0 20px 0;
+  }
+  .row > * {
+    width: 100%;
+    /* flex: none; */
+    flex-wrap: wrap;
+  }
+
+  .row .row {
+    margin: 15px -15px -15px;
+  }
+}

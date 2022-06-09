@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  background-color: white;
+}
+
+.detailsPage {
+  height: 450px;
+  width: 100%;
+}
+.detailsImage {
+  float: left;
+  width: 40%;
+  padding: 5px;
+  padding-top: 65px;
+}
+.productInfo {
+  float: left;
+  text-align: left;
+  width: 60%;
+  padding-left: 40px;
+  padding-right: 100px;
+  padding-top: 60px;
+  color: #151875;
+}
+.description {
+  background-color: #e5e5e5;
+  height: 300px;
+  width: 100%;
+}
+.bigImg {
+  width: 250px;
+  height: 300px;
+  float: right;
+}
+.price {
+  /* font-size: 1.2em; */
+  font-weight: bold;
+}
+.addToCart {
+  background-color: #ff3eb2;
+  border: none;
+  color: white;
+}
+.buttonsStyle {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 3px 12px;
+  cursor: pointer;
+}
+
+.facebookColor {
+  color: rgb(63, 115, 194);
+}
+.twitterColor {
+  color: rgb(29, 155, 240);
+}
+.instagramColor {
+  color: rgb(211, 40, 211);
+}
+.rate {
+  float: left;
+  height: 26px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ccc;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
