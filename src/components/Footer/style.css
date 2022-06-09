@@ -2,4 +2,34 @@
   background-color: #0d0e43;
   height: 250px;
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 30%;
+  padding: 50px 0;
+}
+.footerLogo {
+  color: #8568ff;
+}
+.categories {
+  width: 25%;
+  text-align: left;
+  padding: 20px;
+}
+
+.visit a:visited {
+  color: #8568ff;
+}
+
+.account {
+  width: 25%;
+  text-align: left;
+  padding: 20px;
+}
+.follow {
+  width: 15%;
+  padding: 50px 0;
 }

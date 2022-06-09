@@ -44,11 +44,11 @@
 
 .two-thirds {
   padding: 100px;
-  width: calc(100% * 2 / 3);
+  width: calc(100% * 3 / 5);
   flex: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .row {
     flex-direction: column;
   }
@@ -56,11 +56,12 @@
     padding: 0px;
   }
   .two-thirds {
-    padding: 0px;
+    padding: 0 0 20px 0;
   }
   .row > * {
     width: 100%;
-    flex: none;
+    /* flex: none; */
+    flex-wrap: wrap;
   }
 
   .row .row {
