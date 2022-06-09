@@ -1,22 +1,27 @@
 .tabs {
   display: flex;
+  background-color: #e5e5e5;
 }
 .tab {
   justify-content: left;
   align-items: left;
   width: 20%;
-  background: e5e5e5;
+  background: #e5e5e5;
   padding: 1em 0;
   border: none;
 }
 
 .tab.active {
-  background-color: #8568ff;
   font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.1em;
+}
+.tab:hover {
+  cursor: pointer;
 }
 .panel {
   display: none;
-  background-color: #8568ff;
+  background-color: #e5e5e5;
   padding: 0 0 0 30px;
   height: 250px;
   text-align: left;

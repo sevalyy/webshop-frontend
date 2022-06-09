@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 .container {
-  background-color: #e5e5e5;
+  background-color: white;
 }
 
 .detailsPage {
@@ -19,22 +19,45 @@
   float: left;
   text-align: left;
   width: 60%;
-  padding-left: 30px;
-  padding-right: 70px;
-  padding-top: 65px;
+  padding-left: 40px;
+  padding-right: 100px;
+  padding-top: 60px;
+  color: #151875;
 }
 .description {
-  background-color: rgba(168, 166, 166, 0.89);
+  background-color: #e5e5e5;
   height: 300px;
   width: 100%;
 }
 .bigImg {
-  width: 200px;
+  width: 250px;
   height: 300px;
   float: right;
 }
 .price {
-  font-size: larger;
+  /* font-size: 1.2em; */
+  font-weight: bold;
+}
+.addToCart {
+  background-color: #ff3eb2;
+  border: none;
+  color: white;
+}
+.buttonsStyle {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 3px 12px;
+  cursor: pointer;
+}
+
+.facebookColor {
+  color: rgb(63, 115, 194);
+}
+.twitterColor {
+  color: rgb(29, 155, 240);
+}
+.instagramColor {
+  color: rgb(211, 40, 211);
 }
 .rate {
   float: left;

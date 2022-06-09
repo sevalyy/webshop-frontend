@@ -10,7 +10,6 @@ import {
   FaTwitter,
   FaShoppingBag,
   FaHeart,
-  FaEuroSign,
 } from "react-icons/fa";
 
 const DetailsPage = () => {
@@ -42,6 +41,7 @@ const DetailsPage = () => {
         </div>
         <div className="productInfo">
           <h3>{product.title}</h3>
+          {/* *****RATING STARS******* */}
           <p className="rate">
             <input type="radio" id="star5" name="rate" value="5" />
             <label for="star5" title="text">
@@ -63,18 +63,26 @@ const DetailsPage = () => {
             <label for="star1" title="text">
               1
             </label>
+            {/* ******************** */}
           </p>
-          <button onClick={() => console.log("Add Review clicked!")}>
+          <button
+            className="buttonsStyle"
+            onClick={() => console.log("Add Review clicked!")}
+          >
             Add Review
           </button>
           <br />
           <p className="price">Price: €{product.price}</p>
           <p>{product.description}</p>
-          <button onClick={() => console.log("Item on your basket")}>
+          <button
+            className="buttonsStyle addToCart"
+            onClick={() => console.log("Item on your basket")}
+          >
             <FaShoppingBag />
             Add To Cart
           </button>{" "}
           <button
+            className="buttonsStyle"
             onClick={() => console.log("Item is added to your favorite.")}
           >
             <FaHeart /> Favorite
@@ -82,7 +90,9 @@ const DetailsPage = () => {
           <p>Category: {product.category.title}</p>
           <p>
             {" "}
-            Share <FaFacebook /> <FaInstagram /> <FaTwitter />{" "}
+            Share <FaFacebook className="facebookColor" />{" "}
+            <FaInstagram className="instagramColor" />{" "}
+            <FaTwitter className="twitterColor" />{" "}
           </p>
         </div>
       </div>
