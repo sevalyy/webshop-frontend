@@ -2,7 +2,11 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ProductCard from '../../components/ProductCard';
-import ShopFilter from '../../components/ShopFilter';
+import {
+  CategoryFilter,
+  RatingFilter,
+  PriceFilter
+} from '../../components/ShopFilter';
 import './style.css';
 
 const Shop = () => {
@@ -13,7 +17,6 @@ const Shop = () => {
     const getProducts = async () => {
       try {
         const response = await axios.get('http://localhost:4000/products');
-        // console.log("It's working", response);
         setProducts(response.data);
 
         const getCategories = () => {
@@ -22,7 +25,6 @@ const Shop = () => {
             if (!categoryList.includes(product.category.title)) {
               categoryList.push(product.category.title);
             }
-            console.log(categoryList);
             return categoryList;
           });
           setCategories(categoryList);
@@ -36,19 +38,44 @@ const Shop = () => {
     getProducts();
   }, []);
 
-  // console.log('what is products?', products);
+  const [filterCategories, setFilterCategories] = useState([]); // The value from the Categories filter;
+
+  const filteredProducts =
+    filterCategories.length === 0
+      ? products
+      : products.filter(item => filterCategories.includes(item.category.title));
+
+  const handleChangeFilter = event => {
+    if (!filterCategories.includes(event.target.value)) {
+      setFilterCategories([...filterCategories, event.target.value]);
+    } else {
+      const newCategories = filterCategories.filter(
+        category => category !== event.target.value
+      );
+      setFilterCategories(newCategories);
+    }
+  };
 
   return (
     <div className="shop-container">
       <div className="filter-container">
-        {/* {categories.map(category => {
-          return <ShopFilter category={category} />;
-        })} */}
-        <ShopFilter categories={categories} />
+        <h2>Categories</h2>
+        {categories.map((category, index) => {
+          return (
+            <CategoryFilter
+              key={index}
+              categoryName={category}
+              handleChange={handleChangeFilter}
+            />
+          );
+        })}
+        {/* <CategoryFilter categories={categories} /> */}
+        <RatingFilter />
+        <PriceFilter />
       </div>
       <div className="product-container">
         {products ? (
-          products.map(product => {
+          filteredProducts.map(product => {
             const { id, title, price, description, rating, mainImage } =
               product;
             return (
