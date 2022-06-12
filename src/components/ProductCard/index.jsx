@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
-import './style.css';
+import { Link } from "react-router-dom";
+import "./style.css";
 import {
   AiOutlineShoppingCart,
   AiOutlineZoomIn,
-  AiOutlineHeart
-} from 'react-icons/ai';
+  AiOutlineHeart,
+} from "react-icons/ai";
 
 const ProductCard = ({
   id,
@@ -12,9 +12,9 @@ const ProductCard = ({
   price,
   description,
   rating,
-  image
+  image,
 }) => {
-  const star = '⭐';
+  const star = "⭐";
 
   return (
     <Link className="details-link" to={`/details/${id}`}>
@@ -26,7 +26,7 @@ const ProductCard = ({
           <p className="blue-color">{productName}</p>
           <div className="price-container">
             <p className="blue-color">
-              {'\u20AC'} {price}
+              {"\u20AC"} {price}
             </p>
             <p>
               {rating} {star.repeat(Math.round(rating))}

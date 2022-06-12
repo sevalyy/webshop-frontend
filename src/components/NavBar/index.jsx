@@ -45,7 +45,15 @@ const NavBar = () => {
       <div className="red-box">
         <ul className="nav-list">
           <li>
-            <FaUser />
+            <NavLink
+              to="/login"
+              className="links"
+              style={({ isActive }) =>
+                isActive ? { color: "white" } : undefined
+              }
+            >
+              <FaUser />
+            </NavLink>
           </li>
           <li>
             <FaShoppingBag />

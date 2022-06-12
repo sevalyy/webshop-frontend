@@ -1,13 +1,12 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import ProductCard from '../../components/ProductCard';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import ProductCard from "../../components/ProductCard";
 import {
   CategoryFilter,
   RatingFilter,
-  PriceFilter
-} from '../../components/ShopFilter';
-import './style.css';
+  PriceFilter,
+} from "../../components/ShopFilter";
+import "./style.css";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -16,12 +15,12 @@ const Shop = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/products');
+        const response = await axios.get("http://localhost:4000/products");
         setProducts(response.data);
 
         const getCategories = () => {
           const categoryList = [];
-          response.data.map(product => {
+          response.data.map((product) => {
             if (!categoryList.includes(product.category.title)) {
               categoryList.push(product.category.title);
             }
@@ -43,14 +42,16 @@ const Shop = () => {
   const filteredProducts =
     filterCategories.length === 0
       ? products
-      : products.filter(item => filterCategories.includes(item.category.title));
+      : products.filter((item) =>
+          filterCategories.includes(item.category.title)
+        );
 
-  const handleChangeFilter = event => {
+  const handleChangeFilter = (event) => {
     if (!filterCategories.includes(event.target.value)) {
       setFilterCategories([...filterCategories, event.target.value]);
     } else {
       const newCategories = filterCategories.filter(
-        category => category !== event.target.value
+        (category) => category !== event.target.value
       );
       setFilterCategories(newCategories);
     }
@@ -75,7 +76,7 @@ const Shop = () => {
       </div>
       <div className="product-container">
         {products ? (
-          filteredProducts.map(product => {
+          filteredProducts.map((product) => {
             const { id, title, price, description, rating, mainImage } =
               product;
             return (

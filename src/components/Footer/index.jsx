@@ -15,16 +15,16 @@ const Footer = () => {
         <h4>CATEGORIES</h4>
         <div className="categoryLink visit">
           <p>
-            <Link to={"/shop"}>Electronics</Link>
+            <Link to={"/category/1"}>Electronics</Link>
           </p>
           <p>
-            <Link to={"/shop"}>Jewelery</Link>
+            <Link to={"/category/2"}>Jewelery</Link>
           </p>
           <p>
-            <Link to={"/shop"}>Men's Clothing</Link>
+            <Link to={"/category/3"}>Men's Clothing</Link>
           </p>
           <p>
-            <Link to={"/shop"}>Women's Clothing</Link>
+            <Link to={"/category/4"}>Women's Clothing</Link>
           </p>
         </div>
       </div>

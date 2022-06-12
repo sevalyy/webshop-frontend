@@ -1,0 +1,29 @@
+.container {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loginPage {
+  width: 40%;
+  height: 80%;
+  box-shadow: #5834e8 0px 5px 15px;
+}
+
+.loginForm {
+  text-align: left;
+  padding: 10px;
+}
+.input {
+  width: 95%;
+  height: 20px;
+}
+
+.buttonStyle {
+  text-align: center;
+  width: 95%;
+  height: 25px;
+  border-radius: 10px;
+  background-color: #7656f6;
+  color: white;
+}
