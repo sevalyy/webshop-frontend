@@ -39,9 +39,12 @@ const LoginPage = (props) => {
           <p>You are logged in!</p>
 
           <p>
-            to buy something, go to <Link to="/shop"> Shop Page</Link>
+            Go to <Link to="/shop"> Shop Page</Link>
+            <p>or</p>
           </p>
-          <button onClick={doLogout}>Log Out</button>
+          <button className="buttonStyle" onClick={doLogout}>
+            Log Out
+          </button>
         </div>
       )}
       {!isLoggedin && (
