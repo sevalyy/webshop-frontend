@@ -8,12 +8,12 @@ import Footer from "./components/Footer";
 import CategoryPage from "./pages/CategoryPages/CategoryPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-// import ElectronicsPage from "./pages/CategoryPages/CategoryPage";
-// import JeweleryPage from "./pages/CategoryPages/JeweleryPage";
-// import MensClothingPage from "./pages/CategoryPages/MensClothingPage";
-// import WomensClothingPage from "./pages/CategoryPages/WomensClothing";
+import { useState } from "react";
 
 function App() {
+  //token'i burada tutma sebebimiz, log in olduysa token'a heryerden ulasabilmemiz.
+  const [token, setToken] = useState(null);
+
   return (
     <div className="App">
       <NavBar />
@@ -22,7 +22,12 @@ function App() {
         <Route path="/details/:id" element={<DetailsPage />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/category/:categoryId" element={<CategoryPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        {/* lifting state yapip token'i sadece login sayfasinda degil en ust seviyede tutuyoruz.
+        set simdiki durumunu tutmak icin token ise token'a erismek icin */}
+        <Route
+          path="/login"
+          element={<LoginPage setToken={setToken} token={token} />}
+        />
         <Route path="/register" element={<RegisterPage />} />
       </Routes>
       <Footer />
